@@ -3,10 +3,9 @@ import api from '../../components/api';
 import ArticleCart from './ArticleCart';
 import { useNavigate } from 'react-router-dom';
 
-
-
 function ListArticle() {
     const [articles, setArticles] = useState([]);
+    const navigate = useNavigate();
 
     const getArticles = async () => {
         try {
@@ -40,7 +39,31 @@ function ListArticle() {
     {articles && articles.map((article) => (
         <ArticleCart key={article.id}article={article} handleDelete={handleDelete} id={article.id} />
     ))}
-    
+    <button 
+        className='create-article-button'
+        onClick={() => navigate('/author/create-article')}
+        title="Create Article"
+        style={{
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            width: '50px',
+            height: '50px',
+            borderRadius: '50%',
+            backgroundColor: '#007bff',
+            border: 'none',
+            color: 'white',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0 2px 5px rgba(0,0,0,0.2)'
+        }}
+    >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+        </svg>
+    </button>
     </>
 }
 
