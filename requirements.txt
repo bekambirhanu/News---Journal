@@ -1,2 +1,7 @@
+# backend
 django
 django-restframework
+
+#frontend
+react(vite) v19
+react-router-dom
