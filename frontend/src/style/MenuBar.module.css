@@ -1,0 +1,136 @@
+.menuBar {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+
+.menuContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.menuItem {
+  background: none;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.menuItem:hover {
+  color: #1976d2;
+  background: rgba(25, 118, 210, 0.05);
+}
+
+.menuItem.active {
+  color: #1976d2;
+  background: rgba(25, 118, 210, 0.1);
+}
+
+.menuItem.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  background: #1976d2;
+  border-radius: 3px;
+}
+
+.specialItem {
+  font-weight: 600;
+}
+
+.specialItem:first-child {
+  color: #1976d2;
+}
+
+
+.specialItem:first-child:hover {
+  background: rgba(25, 118, 210, 0.1);
+}
+
+.logo {
+  position: relative;
+  padding: 20px;
+  background: 
+    linear-gradient(to right, #e0e0e0 1px, transparent 1px),
+    linear-gradient(to bottom, #e0e0e0 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.biglogo {
+  font-family: Arial, sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.smalllogo {
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-style: italic;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menuContainer {
+    padding: 0 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .menuItem {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuBar {
+    padding: 0.5rem 0;
+  }
+
+  .menuContainer {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 0 1rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  .menuContainer::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .menuItem {
+    white-space: nowrap;
+    flex: 0 0 auto;
+  }
+} 

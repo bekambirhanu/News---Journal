@@ -1,0 +1,70 @@
+.article-cart {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 24px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-image: linear-gradient(#e5e5e5 1px, transparent 1px);
+    background-size: 100% 2em;
+    line-height: 2em;
+}
+
+.article-header {
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.article-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8em;
+    color: #333;
+    margin: 0;
+    font-weight: 600;
+}
+
+.article-category {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 8px;
+}
+
+.article-content {
+    font-family: 'Georgia', serif;
+    color: #444;
+    font-size: 1.1em;
+    line-height: 2em;
+    margin: 20px 0;
+    padding: 0 10px;
+}
+
+.article-content p {
+    margin: 0;
+    text-align: justify;
+}
+
+.article-footer {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+} 
